@@ -1,0 +1,53 @@
+.header {
+  background-color: $poly-background-color;
+  color: white;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: $sm) {
+    height: $header-height;
+  }
+
+  .logo {
+    width: 5em;
+    height: 2.5rem;
+    margin-left: 3rem;
+  }
+
+  // only shown for mobile screens
+  .hamburger {
+    &,
+    &-box {
+      display: block;
+    }
+
+    &--on-dark-bg .hamburger-box {
+      color: white;
+    }
+  }
+
+  &__top-nav {
+    height: 100%;
+
+    &__link {
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 2.5rem;
+      color: white;
+      height: 5rem;
+      &--yellow {
+        color: $yellow;
+      }
+    }
+
+    &__hamburger {
+      left: 0;
+      top: 1.5rem;
+      position: absolute;
+    }
+  }
+}

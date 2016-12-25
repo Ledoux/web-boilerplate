@@ -1,0 +1,92 @@
+.button {
+  text-decoration: none;
+  text-align: center;
+
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0.5em;
+  padding: 0.875em 1.375em;
+  background-color: $secondary-button-background-color;
+  color: $text-color;
+  fill: $text-color;
+  cursor: pointer;
+  font-family: 'Apercu', $fallback-fonts;
+  .icon {
+    vertical-align: middle;
+  }
+
+  // STYLE
+  &--line {
+    border: 1px solid currentColor;
+    background: transparent;
+  }
+
+  &--primary {
+    background-color: $blue;
+    color: white;
+    fill: white;
+    &.button--line {
+      background: transparent;
+      color: $blue;
+    }
+  }
+  &--primary-alt {
+    background-color: $corn;
+    color: $text-color;
+    font-weight: 600;
+    // DO NOT use on white backgrounds
+    &.button--line {
+      background: transparent;
+      color: $corn;
+    }
+  }
+  // only used on About page...
+  &--red {
+    background-color: $red;
+    // DO NOT use on white backgrounds
+    &.button--line {
+      background: transparent;
+      color: $red;
+    }
+  }
+  &--plain {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  // SIZE
+  &--wide {
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+  }
+  &--large {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    font-size: 1.25em;
+  }
+
+  // STATE
+  &:hover,
+  &:focus {
+    transform: scale(1.04);
+    transition: all 0.2s ease-out;
+  }
+  // override here, rather than using :not selector above,
+  // to keep specificity low for :hover rule
+  &--plain {
+    &:hover,
+    &:focus {
+      transform: none;
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,96 @@
+
+// extending basscss' padding classes
+.pb8 {
+  padding-bottom: 8rem;
+}
+
+.py8 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.vh100 {
+  height: 100vh;
+}
+.vw100 {
+  width: 100vw;
+}
+@media (min-width: $sm) {
+  .sm-mb3 {
+    margin-bottom: 2rem;
+  }
+  .sm-mb4 {
+    margin-bottom: 3rem;
+  }
+  .sm-pb3 {
+    padding-bottom: 2rem;
+  }
+  .sm-pb4 {
+    padding-bottom: 3rem;
+  }
+}
+
+// $lg-col-10 is the width required to fit a $lg column with col-10 class applied
+// (col-10 has width 83.333%)
+$lg-col-10: ($lg / 83.3) * 100;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  position: relative; // needed for fixed modal iOS workarounds
+  color: $text-color;
+  line-height: 1.5;
+  > * {
+    // prevent horisontal scrolling
+    // NOTE: setting this value directly on the body doesn't work in Chrome
+    overflow-x: hidden;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  background: white;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  // needed for IE
+  width: auto;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $blue;
+}
+
+:focus {
+  outline: 0;
+}
+
+input {
+  border-radius: 0;
+  font-size: 18px; // needed to prevent zoom-in on focus in safari mobile
+  @media (min-width: $sm) {
+    font-size: 16px;
+  }
+}
+
+textarea {
+  font: inherit;
+}
+
+.error {
+  color: $error-color;
+}

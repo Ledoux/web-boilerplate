@@ -1,0 +1,43 @@
+.page {
+
+  &-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    &--first {
+      padding-top: 0;
+    }
+    &__between-sections {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      transform: translateY(-50%);
+      width: 100%; // required for centering to work in IE
+      margin-left: auto;
+      margin-right: auto;
+
+      &__button {
+        max-width: 300px;
+        background: $background-dark-blue;
+        border-color: $background-dark-blue;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+        font-size: 1.25rem;
+        &:hover,
+        &:focus {
+          transform: translateY(-50%) scale(1.05);
+          background: $background-dark-blue;
+        }
+      }
+    }
+  }
+  @media (min-width: $md) {
+    &-section {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+      &--first {
+        padding-top: 0;
+        padding-bottom: 4rem;
+      }
+    }
+  }
+}

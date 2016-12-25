@@ -1,0 +1,144 @@
+// Color Palette
+$text-color: #202020;
+$error-color: #F00;
+// Snips' branding colors
+// primary
+$dark-blue: #0C2366;
+$dark-purple: #6726B1;
+$cerise: #D92688;
+$red: #EC1E2F;
+$pumpkin: #FF6616;
+$corn: #FFCA2B;
+$green: #00CD6A;
+$teal: #00D5B5;
+$sky: #32C3FF;
+$blue: blue;
+// pastel
+$dark-blue--pastel: #3A78D5;
+$dark-purple--pastel: #9F61FD;
+$cerise--pastel: #D96CBF;
+$red--pastel: #EA5054;
+$pumpkin--pastel: #F4A16A;
+$corn--pastel: #FDE169;
+$green--pastel: #93F18D;
+$teal--pastel: #7FE8C5;
+$sky--pastel: #96ECF8;
+$blue--pastel: #71BDFC;
+$colors: (
+  dark-blue: #0C2366,
+  dark-purple: #6726B1,
+  cerise: #D92688,
+  red: #EC1E2F,
+  pumpkin: #FF6616,
+  corn: #FFCA2B,
+  green: #00CD6A,
+  teal: #00D5B5,
+  sky: #32C3FF,
+  blue: blue,
+  dark-blue--pastel: #3A78D5,
+  dark-purple--pastel: #9F61FD,
+  cerise--pastel: #D96CBF,
+  red--pastel: #EA5054,
+  pumpkin--pastel: #F4A16A,
+  corn--pastel: #FDE169,
+  green--pastel: #93F18D,
+  teal--pastel: #7FE8C5,
+  sky--pastel: #96ECF8,
+  blue--pastel:#71BDFC
+);
+// from: https://www.sitepoint.com/using-sass-maps/
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// grays
+$black: #0C0C1C;
+$font-middle-grey: #002542;
+$text-color: #202020;
+$font-light-grey: #666;
+$text-para-color: #828282;
+$border-grey: #DADADA;
+$secondary-button-background-color: #e3e3e8;
+$middle-grey: #F3F3F3;
+$light-grey: #FAFAFA;
+$light-grey-blue: #f6f9fc;
+
+// CLASSES
+.white {
+  color: white !important;
+}
+
+.grey {
+  color: $font-light-grey;
+}
+
+.dark-purple {
+  color: $dark-purple;
+}
+
+.teal {
+  color: $teal;
+}
+
+.blue {
+  color: $blue;
+}
+
+// BACKGROUNDS CLASSES
+.bg-black {
+  background-color: $black;
+}
+
+.bg-light-grey {
+  background-color: #F0F0F3;
+}
+
+.bg-light-grey-blue {
+  background-color: $light-grey-blue;
+}
+
+.bg-primary {
+  background-color: $blue;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-teal {
+  background-color: $teal;
+}
+
+.bg-pumpkin {
+  background-color: $pumpkin;
+}
+
+.bg-corn {
+  background-color: $corn;
+}
+
+.bg-dark-blue {
+  background-color: $dark-blue !important;
+}
+
+.bg-dark-purple {
+  background-color: $dark-purple !important;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.bg-red--pastel {
+  background-color: $red--pastel;
+}
+
+// MISC.
+.border-middle-grey {
+  border-color: $middle-grey;
+}

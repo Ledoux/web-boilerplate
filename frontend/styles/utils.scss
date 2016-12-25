@@ -1,0 +1,146 @@
+//height
+
+.full-vh {
+  height: 100vh;
+}
+
+.header-size {
+  height: 725px;
+}
+
+.h300 {
+  height: 300px;
+}
+
+.h350 {
+  height: 350px;
+}
+
+.h450 {
+  height: 450px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+//width
+
+.maxw-text {
+  max-width: 39.875em;
+}
+
+.maxw-medium {
+  max-width: 750px;
+}
+
+.maxw-large {
+  max-width: 1024px;
+}
+
+.maxw-xlarge {
+  max-width: 1280px;
+}
+
+.maxw-xxlarge {
+  max-width: 1500px;
+}
+
+.maxw-350 {
+  max-width: 350px;
+}
+
+.h450 {
+  height: 450px;
+}
+
+.w100per {
+  width: 100%;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.w200 {
+  width: 200px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+//margins
+
+.mt12px {
+  margin-top: 12px;
+}
+
+//paddings
+
+.pl65px {
+  padding-left: 65px;
+}
+
+.py150px {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.sm-pt100px {
+  @media screen and (min-width: $md) {
+    padding-top: 100px;
+  }
+}
+
+.sm-pb100px {
+  @media screen and (min-width: $md) {
+    padding-bottom: 100px;
+  }
+}
+
+//floats
+
+@media screen and (min-width: $md) {
+  .large-left {
+    float: left;
+  }
+}
+
+//colors
+
+.white {
+  color: white;
+}
+
+.bg-light-grey {
+  background-color: #F0F0F3;
+}
+
+
+// position
+
+.centred-450 {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+}
+
+// needs to be refactored
+.content-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media screen and (min-width: $md) {
+    padding: 140px 70px;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 140px 0;
+  }
+}
+
+// missing utils from basscss
+.inline-flex {
+  display: inline-flex;
+}

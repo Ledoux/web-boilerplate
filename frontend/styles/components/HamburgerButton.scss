@@ -1,0 +1,111 @@
+/*
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+$l-height: 1.4em;
+$l-bar-height: 0.1875em;
+$l-vert-gutter: ($l-height - (0.1875em * 3)) / 2;
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  position: relative;
+}
+// JONAS ADDED
+
+.hamburger__notification {
+  position: absolute;
+  top: calc(#{$l-vert-gutter / 2} + 4px);
+  right: calc(#{$l-vert-gutter} + 4px);
+  z-index: 1;
+  background-color: $red;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 3px $dark-blue--pastel;
+}
+
+.hamburger-box {
+  width: $l-height;
+  height: $l-height;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  top: 50%;
+  margin-top: -$l-vert-gutter / 2;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 100%;
+  height: $l-bar-height;
+  background-color: currentColor;
+  border-radius: 0.25em;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+// .hamburger-inner::before {
+//   top: -$l-vert-gutter;
+// }
+
+// .hamburger-inner::after {
+//   bottom: -$l-vert-gutter;
+// }
+
+/*
+slider from:
+https://github.com/jonsuh/hamburgers/blob/master/dist/hamburgers.css
+[APAPTED]
+*/
+.hamburger .hamburger-inner {
+  top: $l-vert-gutter;
+}
+
+.hamburger .hamburger-inner::before {
+  top: $l-vert-gutter;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+.hamburger .hamburger-inner::after {
+  top: $l-vert-gutter * 2;
+}
+
+.hamburger--active .hamburger-inner {
+  transform: translate3d(0, $l-vert-gutter, 0) rotate(45deg);
+}
+
+.hamburger--active .hamburger-inner::before {
+  /* eslint-disable */
+  transform: rotate(-45deg) translate3d(-0.35741em, #{-$l-bar-height * 2}, 0);
+
+  /* eslint-enable */
+  opacity: 0;
+}
+
+.hamburger--active .hamburger-inner::after {
+  /* eslint-disable */
+  transform: translate3d(0, #{-$l-vert-gutter * 2}, 0) rotate(-90deg);
+
+  /* eslint-enable */
+}
